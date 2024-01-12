@@ -1,4 +1,4 @@
-# vuetemplate
+# videolity-vue3-demo
 
 ## Project setup
 ```
