@@ -25,7 +25,7 @@
         </div>
     </nav>
     <div id="header">
-        <video-player></video-player>
+       <video-player />
     </div>
     <div id="services" class="cards-1 bg-gray">
         <div class="container">
