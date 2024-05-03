@@ -14,11 +14,14 @@
 export default {
   data() {
     return {
-      aspectRatio: 1920 / 950,
+      // you can read the video ratio from the viewRatio value in the video URL
+      // or you can write it statically here.
+      aspectRatio: 1920 / 950, 
       videoUrl: "https://preview.dunh29xielhio.amplifyapp.com/video-player?id=JimmyKey&viewRatio=90",
     };
   },
   methods: {
+    // works as the screen size changes.
     handleResize() {
       const iframe = this.$refs.videoIframe;
       const width = iframe.offsetWidth;
@@ -26,6 +29,7 @@ export default {
     },
   },
   mounted() {
+    // listen for screen size change. 
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
   },
