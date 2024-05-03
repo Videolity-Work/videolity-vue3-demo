@@ -14,16 +14,11 @@
 export default {
   data() {
     return {
-      aspectRatio: 16 / 8, // Başlangıçta belirlenmiş en-boy oranı (16:9)
-      videoUrl: "https://preview.dunh29xielhio.amplifyapp.com/video-player?id=JimmyKey",
+      aspectRatio: 1920 / 950,
+      videoUrl: "https://preview.dunh29xielhio.amplifyapp.com/video-player?id=JimmyKey&viewRatio=90",
     };
   },
   methods: {
-    handleMessage(event) {
-      if (event.data && event.data.for === 'videolityIframeResize') {
-        this.aspectRatio = event.data.aspectRatio;
-      }
-    },
     handleResize() {
       const iframe = this.$refs.videoIframe;
       const width = iframe.offsetWidth;
@@ -31,13 +26,10 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener('message', this.handleMessage, false);
     window.addEventListener('resize', this.handleResize);
-
     this.handleResize();
   },
   beforeUnmount() {
-    window.removeEventListener('message', this.handleMessage, false);
     window.removeEventListener('resize', this.handleResize);
   },
 };
