@@ -17,7 +17,7 @@ export default {
       // you can read the video ratio from the viewRatio value in the video URL
       // or you can write it statically here.
       aspectRatio: 1920 / 950, 
-      videoUrl: "https://preview.dunh29xielhio.amplifyapp.com/video-player?id=JimmyKey&viewRatio=90",
+      videoUrl: "https://staging.vdlty.co/video-player?id=30ca1a03-c339-4ce7-85c1-920155b69dc4&viewRatio=1920:950",
     };
   },
   methods: {
